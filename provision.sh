@@ -24,8 +24,8 @@ ${SCRIPT_HOME}/set_timezone.sh
 # set ssh-key
 ${SCRIPT_HOME}/set_ssh-key.sh
 
-\cp -rf /vagrant/ansible /home/vagrant/
-cd /home/vagrant/ansible
-chmod 644 hosts
+cd ${USR_HOME}
+git clone https://github.com/gomesuit/ansible_Playbook.git
+
 #ansible-playbook -i hosts simple-playbook.yml
-ansible-playbook -i hosts serverspec.yml
+#ansible-playbook -i hosts serverspec.yml

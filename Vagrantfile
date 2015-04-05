@@ -14,8 +14,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "2048"]
   end
 
-  config.vm.define "ansible_server" do |host|
-    host.vm.hostname = "ansible_server"
+  config.vm.define "ansible" do |host|
+    host.vm.hostname = "ansible"
     host.vm.network "private_network", ip: "192.168.33.11"
     host.vm.provision :shell, :path => "provision.sh"
   end

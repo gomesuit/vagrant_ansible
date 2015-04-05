@@ -26,7 +26,12 @@ ${SCRIPT_HOME}/set_timezone.sh
 
 cd ${USR_HOME}
 git clone https://github.com/gomesuit/ansible_Playbook.git
-
+cd ansible_Playbook
 #ansible-playbook -i hosts simple-playbook.yml
 #ansible-playbook -i hosts serverspec.yml
 ansible-playbook -i localhost serverspec.yml
+
+cd ${USR_HOME}
+git clone https://github.com/gomesuit/serverspecFile.git
+cd serverspecFile
+rake spec

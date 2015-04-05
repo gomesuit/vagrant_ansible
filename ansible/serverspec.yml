@@ -1,0 +1,6 @@
+---
+- hosts: serverspec-server
+  sudo: yes
+  tasks:
+    - name: be sure serverspec is installed
+      gem: name=serverspec user_install=False

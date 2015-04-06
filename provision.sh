@@ -36,6 +36,7 @@ ansible-playbook -i localhost timezone.yml
 ansible-playbook -i localhost serverspec.yml
 #ansible-playbook -i localhost git_serverspec.yml
 
+cd /home/vagrant
 git clone https://github.com/gomesuit/serverspecFile.git
 cd serverspecFile
 rake spec

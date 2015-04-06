@@ -9,7 +9,7 @@ sed -i -e 's/\r$//' *
 . /etc/global.rc
 
 # yum install
-${SCRIPT_HOME}/install_yum.sh
+#${SCRIPT_HOME}/install_yum.sh
 
 # install ruby
 #${SCRIPT_HOME}/install_ruby-2.2.0.sh
@@ -31,6 +31,7 @@ git clone https://github.com/gomesuit/ansible_Playbook.git
 cd ansible_Playbook
 #ansible-playbook -i hosts simple-playbook.yml
 #ansible-playbook -i hosts serverspec.yml
+ansible-playbook -i localhost yum-playbook.yml
 ansible-playbook -i localhost serverspec.yml
 
 cd ${USR_HOME}

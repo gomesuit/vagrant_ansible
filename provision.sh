@@ -2,6 +2,8 @@
 echo "alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'" >> /home/vagrant/.bashrc
 
 # init vagrant
+cd /vagrant/provision/install/
+sed -i -e 's/\r$//' *
 /vagrant/provision/install/init_vagrant.sh
 
 . /etc/global.rc

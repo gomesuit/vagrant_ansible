@@ -1,5 +1,4 @@
 #!/bin/sh
-echo "alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'" >> /home/vagrant/.bashrc
 
 # init vagrant
 #cd /vagrant/provision/install/
@@ -8,21 +7,8 @@ echo "alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --s
 
 #. /etc/global.rc
 
-# yum install
-#${SCRIPT_HOME}/install_yum.sh
-
-# install ruby
-#${SCRIPT_HOME}/install_ruby-2.2.0.sh
-
 # install ansible
-#${SCRIPT_HOME}/install_ansible.sh
 yum -y install ansible
-
-# service stop
-#${SCRIPT_HOME}/stop_service.sh
-
-# set timezone
-#${SCRIPT_HOME}/set_timezone.sh
 
 # set ssh-key
 #${SCRIPT_HOME}/set_ssh-key.sh
@@ -30,12 +16,22 @@ yum -y install ansible
 cd /home/vagrant
 git clone https://github.com/gomesuit/ansible_Playbook.git
 cd ansible_Playbook
+
+# yum install
 ansible-playbook -i localhost yum-playbook.yml
+
+# service stop
 ansible-playbook -i localhost servicestop.yml
+
+# set timezone
 ansible-playbook -i localhost timezone.yml
+
+# install serverspec
 ansible-playbook -i localhost serverspec.yml
+
 #ansible-playbook -i localhost git_serverspec.yml
 
+# run serverspec
 cd /home/vagrant
 git clone https://github.com/gomesuit/serverspecFile.git
 cd serverspecFile

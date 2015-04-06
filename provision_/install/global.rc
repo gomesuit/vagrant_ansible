@@ -1,4 +1,0 @@
-USR_HOME="/home/vagrant"
-SRC_HOME="${USR_HOME}/src"
-SCRIPT_HOME="${USR_HOME}/install"
-DEPLOY_HOME="${USR_HOME}/deploy"

@@ -9,7 +9,7 @@ git clone https://github.com/gomesuit/ansible_Playbook.git
 cd ansible_Playbook
 
 # run ansbile
-ansible-playbook -i localhost localhost.yml
+ansible-playbook -i hosts localhost.yml
 
 # git clone serverspec file
 cd /home/vagrant

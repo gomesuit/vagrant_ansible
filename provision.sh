@@ -12,9 +12,12 @@ cd ansible_Playbook
 ansible-playbook -i hosts localhost.yml
 
 # git clone serverspec file
-cd /home/vagrant
-git clone https://github.com/gomesuit/serverspecFile.git
+#cd /home/vagrant
+#git clone https://github.com/gomesuit/serverspecFile.git
 
 # run serverspec
-cd serverspecFile
-rake spec
+#cd serverspecFile
+#rake spec
+
+cd /home/vagrant
+git clone https://github.com/gomesuit/my-kitchen.git

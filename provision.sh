@@ -23,4 +23,5 @@ yum -y install ansible
 cd /home/vagrant
 git clone https://github.com/gomesuit/provisioner.git
 # run ansbile
-ansible-playbook -i hosts localhost.yml
+cd /home/vagrant/provisioner
+ansible-playbook -i hosts provisioner.yml

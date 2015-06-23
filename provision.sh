@@ -4,12 +4,12 @@
 yum -y install ansible
 
 # git clone playbook
-cd /home/vagrant
-git clone https://github.com/gomesuit/ansible_Playbook.git
-cd ansible_Playbook
+#cd /home/vagrant
+#git clone https://github.com/gomesuit/ansible_Playbook.git
+#cd ansible_Playbook
 
 # run ansbile
-ansible-playbook -i hosts localhost.yml
+#ansible-playbook -i hosts localhost.yml
 
 # git clone serverspec file
 #cd /home/vagrant
@@ -19,5 +19,8 @@ ansible-playbook -i hosts localhost.yml
 #cd serverspecFile
 #rake spec
 
+# git clone provisioner
 cd /home/vagrant
 git clone https://github.com/gomesuit/provisioner.git
+# run ansbile
+ansible-playbook -i hosts localhost.yml

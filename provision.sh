@@ -20,4 +20,4 @@ ansible-playbook -i hosts localhost.yml
 #rake spec
 
 cd /home/vagrant
-git clone https://github.com/gomesuit/my-kitchen.git
+git clone https://github.com/gomesuit/provisioner.git

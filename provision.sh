@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # install ansible
-yum -y install ansible
+yum -y install epel-release
+yum -y install git ansible
 
 # git clone playbook
 #cd /home/vagrant

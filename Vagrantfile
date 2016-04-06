@@ -5,9 +5,9 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "bento/centos-6.7"
+  config.vm.box_version = "2.2.5"
 
-  config.vm.box = "centos-0605-x64"
-  config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.5.3/centos65-x86_64-20140116.box"
   #config.vm.network :forwarded_port, guest: 80, host: 80
 
   config.vm.provider :virtualbox do |vb|
@@ -18,6 +18,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.hostname = "ansible"
     host.vm.network "private_network", ip: "192.168.33.11"
     host.vm.provision :shell, :path => "provision.sh"
+  end
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
   end
   
 end

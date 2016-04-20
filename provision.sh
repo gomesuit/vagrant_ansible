@@ -1,8 +1,14 @@
 #!/bin/sh
 
+yum -y install wget git
 # install ansible
-yum -y install epel-release
-yum -y install git ansible
+cd /tmp
+wget http://releases.ansible.com/ansible/ansible-2.0.2.0.tar.gz
+tar zxf ansible-2.0.2.0.tar.gz
+cd ansible-2.0.2.0
+make
+make install
+cp /vagrant/ansible.cfg /root/.ansible.cfg
 
 # git clone playbook
 #cd /home/vagrant

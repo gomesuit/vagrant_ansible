@@ -1,7 +1,8 @@
 #!/bin/sh
 
-yum -y install wget git
+yum -y install wget
 # install ansible
+yum -y install python-setuptools gcc python-devel
 cd /tmp
 wget http://releases.ansible.com/ansible/ansible-2.0.2.0.tar.gz
 tar zxf ansible-2.0.2.0.tar.gz
@@ -27,6 +28,7 @@ cp /vagrant/ansible.cfg /root/.ansible.cfg
 #rake spec
 
 # git clone provisioner
+yum -y install git
 cd /home/vagrant
 git clone https://github.com/gomesuit/provisioner.git
 # run ansbile

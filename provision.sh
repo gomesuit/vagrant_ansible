@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# install ansible
-sh /vagrant/install_ansible.sh
-
 # git clone playbook
 #cd /home/vagrant
 #git clone https://github.com/gomesuit/ansible_Playbook.git
@@ -19,8 +16,7 @@ sh /vagrant/install_ansible.sh
 #cd serverspecFile
 #rake spec
 
-# install git
-sh /vagrant/install_git.sh
+export PATH=$PATH:/usr/local/bin
 
 # git clone provisioner
 cd /home/vagrant

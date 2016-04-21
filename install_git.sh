@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # install dependency
+yum install -y gcc
 yum install -y openssl-devel zlib-devel
 yum install -y libcurl-devel
 yum install -y expat-devel

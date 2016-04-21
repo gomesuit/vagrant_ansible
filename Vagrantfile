@@ -17,6 +17,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "ansible" do |host|
     host.vm.hostname = "ansible"
     host.vm.network "private_network", ip: "192.168.33.11"
+    host.vm.provision :shell, :path => "install_ansible.sh"
+    host.vm.provision :shell, :path => "install_git.sh"
     host.vm.provision :shell, :path => "provision.sh"
   end
 

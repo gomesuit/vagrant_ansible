@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # install dependency
-yum install openssl-devel zlib-devel
-yum install libcurl-devel
-yum install expat-devel
-yum install perl-ExtUtils-MakeMaker
-yum install gettext-devel
+yum install -y openssl-devel zlib-devel
+yum install -y libcurl-devel
+yum install -y expat-devel
+yum install -y perl-ExtUtils-MakeMaker
+yum install -y gettext-devel
 
 cd /tmp
 wget https://github.com/git/git/archive/v2.8.1.tar.gz

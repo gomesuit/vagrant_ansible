@@ -18,8 +18,8 @@ make prefix=/usr/local/git2.8.1 install
 
 ln -s /usr/local/git2.8.1/bin/git /usr/local/bin/git
 
-git config --global user.email "you@example.com"
-git config --global user.name "gomesuit"
+/usr/local/bin/git config --global user.email "you@example.com"
+/usr/local/bin/git config --global user.name "gomesuit"
 
-git config --global credential.helper cache
-git config credential.helper 'cache --timeout=300'
+/usr/local/bin/git config --global credential.helper cache
+/usr/local/bin/git config credential.helper 'cache --timeout=300'

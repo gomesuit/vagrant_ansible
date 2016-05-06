@@ -22,4 +22,3 @@ ln -s /usr/local/git2.8.1/bin/git /usr/local/bin/git
 /usr/local/bin/git config --global user.name "gomesuit"
 
 /usr/local/bin/git config --global credential.helper cache
-/usr/local/bin/git config credential.helper 'cache --timeout=300'

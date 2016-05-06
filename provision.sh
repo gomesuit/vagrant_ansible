@@ -19,8 +19,8 @@
 export PATH=$PATH:/usr/local/bin
 
 # git clone provisioner
-cd /home/vagrant
+cd ~
 git clone https://github.com/gomesuit/provisioner.git
 # run ansbile
-cd /home/vagrant/provisioner
+cd provisioner
 ansible-playbook -i hosts provisioner.yml
